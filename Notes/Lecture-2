@@ -1,0 +1,27 @@
+# 📘 Notes – Virtual Machines in GCP
+
+### ☁️ Compute Engine Overview
+- GCP’s IaaS offering for creating Virtual Machines (VMs).
+- Offers flexibility in machine types, boot disks, zones, and networking.
+
+### 💸 Free Tier
+- `e2-micro` machine type is free under the GCP Free Tier.
+- Eligible zones: `us-west1`, `us-central1`, and `us-east1`.
+
+### ⚙️ VM Setup Options
+- Machine type: `e2-micro` (Free tier)
+- OS Image: Debian or Ubuntu (small boot disk)
+- Disk: 10 GB standard persistent disk (default)
+- Zone: Prefer `us-central1-a` or other free tier zones
+- Firewall: Allow HTTP & HTTPS if needed (useful for hosting)
+
+### 🐧 SSH Access
+- Use GCP browser-based SSH terminal or third-party tools.
+- You don’t need to set a password — keys are managed by GCP.
+
+### 🔒 Firewall
+- Optional: Enable HTTP/HTTPS traffic when creating the instance.
+- Or manage later in VPC → Firewall Rules.
+
+---
+
