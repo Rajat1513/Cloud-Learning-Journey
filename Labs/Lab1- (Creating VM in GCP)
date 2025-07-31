@@ -23,4 +23,4 @@ Create a free-tier eligible virtual machine using Compute Engine and connect via
 | `vm-list-after-creation.png` | After creation – VM running in list |
 | `vm-ssh-running.png` | Inside SSH terminal |
 
-** Screenshots are available in screenshots file section **
+** Screenshots are available in screenshots folder section **
