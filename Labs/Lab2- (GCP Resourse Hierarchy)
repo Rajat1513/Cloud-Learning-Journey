@@ -1,0 +1,32 @@
+# Day 3 – Lab Work
+
+## 🎯 Objective
+To explore and understand the GCP resource hierarchy (Organization → Folders → Projects → Resources) through the GCP Console.
+
+---
+
+## 🛠️ Steps Performed
+
+1. **Checked Available Projects**  
+   - Navigated to the "Manage Resources" section in GCP Console.  
+   - Verified my existing projects, their **Project IDs**, and **Project Numbers**.
+
+2. **Viewed Project Details**  
+   - Opened one project and reviewed:
+     - Project name  
+     - Project ID  
+     - Project number  
+     - Billing status  
+
+3. **Searched for Organization & Folder Options**  
+   - Confirmed that **Organization** and **Folders** are not available in my free-tier account (only starts at project level).
+
+---
+
+## 📚 Learning Outcome
+- Learned how GCP organizes resources.
+- Understood policy inheritance and billing link at different hierarchy levels.
+- Noted that free-tier accounts generally skip the Organization and Folder levels.
+
+
+** Screenshots are available in screenshots folder section **
