@@ -1,0 +1,62 @@
+# Day 3 – GCP Resource Hierarchy: Organizations, Projects, and Folders
+
+## 📌 Overview
+In Google Cloud, resources are arranged in a hierarchy for better management, access control, and billing tracking.
+
+The hierarchy is:
+
+Organization → Folder(s) → Project(s) → Resources
+
+
+---
+
+## 🏢 Organization
+- Represents the **root node** in the GCP resource hierarchy.
+- Usually linked to a **Google Workspace (G Suite)** or **Cloud Identity** account.
+- Every resource in the organization inherits policies from here.
+- **Free tier personal accounts** often do not have an Organization node.
+
+**Example:** A company like "TechCorp Pvt Ltd".
+
+---
+
+## 📂 Folder
+- **Optional** grouping mechanism between Organization and Projects.
+- Helps organize projects based on **departments, teams, or environments**.
+- Policies applied to a folder are inherited by all projects inside it.
+- Requires an Organization to exist.
+
+**Example:** Departments like "DevOps Team", "Finance", "R&D".
+
+---
+
+## 📁 Project
+- **Mandatory** container for resources.
+- Each project has:
+  - **Project Name** – human-readable name.
+  - **Project ID** – unique, permanent identifier for APIs & billing.
+  - **Project Number** – system-generated numeric ID.
+- Billing, IAM permissions, and quotas are managed at the project level.
+
+**Example:** "Website Deployment", "Data Analytics Pipeline".
+
+---
+
+## 📊 Real-World Analogy
+- **Organization** = Company HQ.
+- **Folder** = Departments inside the company.
+- **Project** = Specific work or client project handled by a department.
+- **Resources** = Employees, tools, and assets used for that project.
+
+---
+
+## 🔍 Key Points
+- Every GCP resource must belong to a project.
+- Policies flow **top-down** (Organization → Folder → Project → Resource).
+- You can have multiple projects under one billing account.
+- Free tier accounts usually start at the **Project** level.
+
+---
+
+## 📚 Reference
+- [GCP Resource Hierarchy Documentation](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy)
