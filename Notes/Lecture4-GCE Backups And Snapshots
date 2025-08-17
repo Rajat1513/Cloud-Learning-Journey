@@ -1,0 +1,38 @@
+# Lecture 4: GCE Backups & Snapshots Explained
+
+## 1. Managing GCE VM Instances
+- Commands covered:
+  - `gcloud compute instances start INSTANCE_NAME`
+  - `gcloud compute instances stop INSTANCE_NAME`
+  - `gcloud compute instances delete INSTANCE_NAME`
+  - `gcloud compute instances update INSTANCE_NAME --zone ZONE --metadata ...`
+
+## 2. Understanding Snapshots
+- **Snapshot**: Point-in-time capture of a persistent disk.
+- Benefits:
+  - Fast provisioning of new disks.
+  - Rollback point before risky changes.
+  - Cost-effective storage option vs. full disk backups.
+
+## 3. Creating a Snapshot
+- Steps:
+  1. Identify the disk you want to snapshot (`gcloud compute disks list`).
+  2. Create snapshot:
+     ```bash
+     gcloud compute disks snapshot DISK_NAME \
+       --snapshot-names NAME_OF_SNAPSHOT \
+       --zone ZONE
+     ```
+  3. Verify creation:
+     ```bash
+     gcloud compute snapshots list
+     ```
+
+## 4. Practical Tips
+- Use **consistent snapshots**: Stop critical write workloads before snapshotting.
+- Label and tag snapshots for traceability.
+- Clean up old snapshots to minimize costs.
+
+
+
+
