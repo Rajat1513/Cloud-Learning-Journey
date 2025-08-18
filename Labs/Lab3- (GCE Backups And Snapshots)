@@ -1,0 +1,64 @@
+🔬 Lab Work – VM Data Protection (Snapshots, Static IP & Machine Image)
+
+🎯 Objective
+Implement VM data protection in Google Cloud by reserving a static IP, creating a machine image, and taking a snapshot for backup/recovery.
+
+🛠️ Steps Performed
+
+## 1. Explored VM Instance Options
+
+🔹Navigated to Compute Engine → VM Instances
+
+🔹Selected VM: test-linux-vm (zone: us-central1-a)
+
+🔹Opened More actions menu → Configure data protection, labels, permissions
+
+## 2. Reserved a Static External IP
+
+🔹Edited VM network settings
+
+🔹Selected Reserve static external IP address
+
+🔹Named it: static-vm-ip
+
+🔹Assigned IP to the VM
+
+## 3. Created a Machine Image
+
+🔹Navigated to Compute Engine → Machine Images
+
+🔹Chose Create machine image
+
+  👉 Entered details:
+
+🔹Name: vm-image-1
+
+🔹Source VM: test-vm
+
+🔹Location: Regional (us-central1)
+
+🔹Clicked Create
+
+## 4. Created a Snapshot
+
+🔹Navigated to Compute Engine → Snapshots
+
+🔹Clicked Create snapshot
+
+  👉Entered details:
+
+🔹Name: snapshot-test
+
+🔹Source disk: test-vm (10GB)
+
+🔹Verified snapshot created (size: ~52 MB)
+
+## 📚 Learning Outcome
+
+🟢 Understood how to protect VM data using Snapshots and Machine Images.
+
+🟢 Learned to reserve a Static External IP for persistent connectivity.
+
+🟢 Gained clarity on when to use Snapshots vs Machine Images.
+
+**Screenshots are available in screenshots folder section**
