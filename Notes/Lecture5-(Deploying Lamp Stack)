@@ -1,0 +1,77 @@
+# Lecture 5 : Deploying A Lamp Stack From Google Cloud Marketplace.
+
+
+📌 Topic Overview
+
+This video explains how to deploy a full LAMP stack (Linux, Apache, MySQL, PHP) using Google Cloud Marketplace, making it easy to launch a web-ready environment with minimal manual setup.
+
+# 🔑 Key Concepts & Steps
+
+1. Understanding LAMP Stack
+
+ L → Linux (Operating System)
+
+ A → Apache (Web Server)
+
+ M → MySQL (Database)
+
+ P → PHP (Server-side scripting)
+
+👉 This stack is widely used to build and run dynamic web applications.
+
+👉 Marketplace simplifies the setup by offering a pre-configured template with all components.
+
+# 2. Navigating GCP Marketplace
+
+- Open Google Cloud Console → Marketplace
+
+- Search for LAMP (Bitnami)
+
+- Select the solution → Click Launch
+
+# 3. Deployment Configuration
+
+- While deploying, configure:
+
+- Deployment Name
+
+- Region / Zone
+
+- Machine Type (VM resources)
+
+- Firewall Options → Allow HTTP/HTTPS
+
+- Review terms → Click Deploy
+
+# 4. Confirming Deployment
+
+- Wait until the status shows Deployed.
+
+- This confirms VM, database, firewall rules & resources are ready.
+
+# 5. Accessing the Deployed Stack
+
+- Go to Compute Engine → VM Instances
+
+- Find the VM created by Marketplace
+
+- Click SSH to connect to the VM
+
+# 6. Verification with PHP
+
+- Run in SSH terminal:
+
+( sudo sh -c 'echo "<?php phpinfo(); ?>" > apache2/htdocs/phpinfo.php' )
+
+
+- Open External IP/phpinfo.php in a browser
+
+- If PHP info page appears → ✅ Deployment Successful
+
+# ⭐ Takeaway Benefits
+
+⚡ Speed → Launch stack in minutes.
+
+🛠️ Simplicity → Pre-configured setup (OS, web server, DB, networking).
+
+✅ Validation → Use phpinfo() to confirm everything works.
