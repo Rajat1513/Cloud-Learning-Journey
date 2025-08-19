@@ -1,0 +1,77 @@
+# Lecture 6 – Managed Instance Groups (MIG) in Google Cloud.
+
+## 📌 Overview  
+In this video, we learned about **Managed Instance Groups (MIGs)** in Google Cloud.  
+MIGs help us run multiple **identical VM instances** as a single unit. They provide **autoscaling, self-healing, and load balancing** features to ensure that applications remain available and scalable without manual intervention.  
+
+---
+
+## 📝 Key Concepts  
+
+1. **Managed Instance Group (MIG)**  
+   - A collection of VM instances created from the same **instance template**.  
+   - Ensures uniformity – all VMs in the group have the same configuration.  
+   - Can automatically add/remove instances based on demand.  
+
+2. **Unmanaged Instance Group** (for comparison)  
+   - Collection of VMs with different configurations.  
+   - Does not support autoscaling or automatic updates.  
+
+3. **Why MIG?**  
+   - High availability.  
+   - Automatic scaling up/down based on load.  
+   - Self-healing (recreates unhealthy instances).  
+   - Works well with **load balancers**.  
+
+---
+
+## ⚙️ Steps Shown in the Video  
+
+1. **Create an Instance Template**  
+   - Define machine type, boot disk, image, firewall rules, etc.  
+   - This template acts as the "blueprint" for all instances in the MIG.  
+
+2. **Create a Managed Instance Group**  
+   - Navigate to **Compute Engine → Instance Groups**.  
+   - Choose **New Managed Instance Group**.  
+   - Provide:
+     - Group name & region/zone.  
+     - The instance template created earlier.  
+     - Initial number of VM instances.  
+
+3. **Enable Autoscaling**  
+   - Choose metric (e.g., **CPU utilization 60%**).  
+   - Define min/max number of instances.  
+   - MIG will automatically add/remove VMs based on the workload.  
+
+4. **Health Checks & Self-Healing**  
+   - Attach a health check.  
+   - MIG automatically replaces unhealthy or failed VMs.  
+
+5. **(Optional) Load Balancer Integration**  
+   - MIGs can be attached to a load balancer.  
+   - Ensures traffic is evenly distributed across all healthy instances.  
+
+---
+
+## ✅ Key Takeaways  
+
+- MIGs = **scalable + reliable infrastructure**.  
+- Autoscaling saves cost by **adding instances only when needed**.  
+- Health checks ensure **uninterrupted services** by replacing failed instances.  
+- Ideal for production workloads like **web servers, APIs, and microservices**.  
+
+---
+
+## 📖 Example Use Case  
+Imagine you’re running an **e-commerce website**:  
+- During normal hours → 2–3 VMs handle traffic.  
+- During sales or festivals → MIG automatically adds more VMs to handle high load.  
+- If one VM crashes → MIG replaces it automatically.  
+- A load balancer ensures users are directed to the nearest healthy instance.  
+
+---
+
+## 🎯 Conclusion  
+Managed Instance Groups are one of the **core building blocks** of scalable architecture in Google Cloud.  
+They reduce operational overhead by automating scaling and healing, ensuring your applications stay **reliable, available, and cost-efficient**.  
