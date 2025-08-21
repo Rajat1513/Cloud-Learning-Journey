@@ -1,0 +1,54 @@
+# 📘 Lecture 7 – Billing Account, Budgets & Alerts in Google Cloud .
+
+## 🔹 What is a Billing Account?  
+- A **Billing Account** is required to pay for Google Cloud resources.  
+- It is linked to one or more projects.  
+- Types of Billing Accounts:  
+  - **Self-serve (online):** Payment via credit/debit card.  
+  - **Invoiced:** For enterprises with monthly invoices.  
+
+---
+
+## 🔹 Linking Projects to Billing  
+- Each project must be **associated with a billing account**.  
+- A project can only be linked to **one billing account** at a time.  
+- You can **switch billing accounts** for a project if you have multiple.  
+
+---
+
+## 🔹 Budgets in Google Cloud  
+- Budgets help you **control and track spending**.  
+- You define a **target amount** for your spend.  
+- Budgets can be set:  
+  - Per project  
+  - Per billing account  
+  - Per service  
+
+---
+
+## 🔹 Alerts in Google Cloud  
+- Alerts notify you when spending reaches certain **thresholds**.  
+- Threshold examples:  
+  - 50% of budget  
+  - 90% of budget  
+  - 100% of budget  
+- Alerts can be delivered via:  
+  - **Email notifications**  
+  - **Pub/Sub topics** (for automation/integration with Slack, etc.)  
+
+---
+
+## 🔹 Billing Reports & Monitoring  
+- Provides a **visual breakdown** of cost usage.  
+- Helps analyze spend **per service, per project, per region**.  
+- Supports **FinOps practices** (cost optimization & governance).  
+
+---
+
+## ✅ Key Takeaways  
+- Billing accounts are **mandatory** for using paid GCP resources.  
+- Projects must be linked to a billing account to function.  
+- **Budgets + Alerts** = prevent overspending.  
+- Use **Reports** for cost transparency & optimization.
+
+**Screenshots are available in screenshots folder section** 
