@@ -1,0 +1,83 @@
+# ☁️ Namaste GCP – Video 8 Notes
+## Identity and Access Management (IAM)
+
+---
+
+### 🔑 What is IAM?
+- IAM = **Identity and Access Management** in Google Cloud.
+- It is used to **control who (identity) can do what (role/permission) on which resource**.
+- Helps enforce **least privilege principle** → users only get the permissions they need.
+
+---
+
+### 👤 Identities in GCP
+Identities represent *who* is accessing resources:
+- **Google Accounts** → personal or work accounts (e.g., Gmail, Workspace).
+- **Service Accounts** → non-human identities for apps, VMs, services.
+- **Google Groups** → collection of Google accounts, useful for managing access in bulk.
+- **Cloud Identity / G Suite domains** → organizational identity management.
+
+---
+
+### 📦 Resources in GCP
+- Everything in GCP is a **resource** (VMs, Buckets, Networks, etc.).
+- Resources are organized in a **hierarchy**:
+  - **Organization → Folders → Projects → Resources**  
+- IAM policies can be applied at any level in the hierarchy.
+
+---
+
+### 🛡️ Roles in GCP
+Roles define *what actions* an identity can perform.
+
+1. **Primitive Roles** (basic, broad):
+   - `Viewer` → read-only access.
+   - `Editor` → read + write access.
+   - `Owner` → full access, including managing roles.
+
+2. **Predefined Roles** (fine-grained, service-specific):
+   - Created by Google, e.g.:
+     - `roles/storage.objectViewer`
+     - `roles/compute.instanceAdmin`
+   - Recommended for most real-world use cases.
+
+3. **Custom Roles** (organization-specific):
+   - Created by admins.
+   - Allows tailoring specific sets of permissions.
+
+---
+
+### 🧾 IAM Policy Structure
+- IAM Policy = binding of **Identity + Role + Resource**.
+- JSON or YAML structure:
+  ```json
+  {
+    "bindings": [
+      {
+        "role": "roles/storage.admin",
+        "members": [
+          "user:abc@gmail.com",
+          "serviceAccount:my-service@gcp.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+
+---
+
+⚖️ Best Practices for IAM
+
+🔹Always follow least privilege (give minimum access required).
+
+🔹Prefer predefined roles over primitive roles.
+
+🔹Use groups instead of assigning roles individually.
+
+🔹Use service accounts for applications and automation.
+
+🔹Regularly audit IAM policies to detect overly broad permissions.
+
+---
+
+✅ Key Takeaway:
+IAM is the backbone of security and access control in GCP. It defines who can do what, where, ensuring resources are only accessed by authorized identities with the correct roles.
