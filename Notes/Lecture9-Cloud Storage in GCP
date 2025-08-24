@@ -1,0 +1,66 @@
+## Lecture 9- Google Cloud Storage ☁️
+
+## Introduction 📌
+Google Cloud Storage (GCS) is a fully managed, scalable, and highly durable **object storage** service.  
+It allows storing and retrieving any amount of data, at any time, from anywhere.  
+Common use cases: backups, website content, media files, analytics data, and more.
+
+---
+
+## Key Concepts 🗂️
+
+### 1. Buckets 🪣
+- Buckets are the **basic container** in GCS where objects (files) are stored.
+- Each bucket has:
+  - **Globally unique name** 🌍
+  - **Location** (region, dual-region, or multi-region) 📍
+  - **Storage class** 🏷️ (Standard, Nearline, Coldline, Archive)
+  - **Access Control** settings 🔐
+
+### 2. Objects 📄
+- The files/data stored in GCS are called **Objects**.
+- Objects are **immutable** – once uploaded, they cannot be modified, only replaced.
+- Metadata (content type, creation date, etc.) is stored along with objects.
+
+### 3. Storage Classes 🏷️
+- **Standard** → Frequently accessed data ⚡
+- **Nearline** → Data accessed < once per month 📅
+- **Coldline** → Data accessed < once per quarter ❄️
+- **Archive** → Long-term storage (years) 📦
+
+### 4. Locations 📍
+- **Region** → Data stored in a single region (e.g., `us-central1`).
+- **Dual-region** → Data replicated across 2 regions.
+- **Multi-region** → Data replicated across multiple regions for high availability.
+
+### 5. Access Control 🔑
+- Two models:
+  - **Uniform bucket-level access** → Permissions applied at bucket level.
+  - **Fine-grained access** → Permissions at object level.
+- Controlled via **IAM roles** 👥 and **ACLs** 📝.
+
+---
+
+## Features ⭐
+- **Versioning**: Keep multiple versions of an object 🔄
+- **Lifecycle Management**: Automate transitions between storage classes or deletion based on conditions ⏳
+- **Encryption**: All data encrypted by default (Google-managed or customer-managed keys) 🔒
+- **Signed URLs**: Provide temporary access to objects without IAM 🌐
+
+---
+
+## Use Cases 🚀
+- Website hosting 🌍
+- Backup and archival 📂
+- Big Data analytics input/output storage 📊
+- Content delivery for media and apps 🎬
+- Disaster recovery storage 🛡️
+
+---
+
+## Summary 📝
+- GCS is **object storage**, not block or file storage.  
+- Data is stored in **buckets** and organized as **objects**.  
+- Choose storage class & location based on **cost vs access frequency** ⚖️.  
+- IAM and ACLs control access to buckets/objects 🔑.  
+- GCS integrates with other GCP services like BigQuery, Dataflow, AI/ML 🤖.
