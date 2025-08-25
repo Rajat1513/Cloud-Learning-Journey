@@ -1,0 +1,46 @@
+# Lecture10 - ☁️ Google Cloud Persistent Disk (Block Storage).
+
+## 📌 What is Persistent Disk (PD)?  
+- Persistent Disk is a **durable block storage solution** provided by Google Cloud.  
+- It can be **attached to VM instances** and behaves like a physical hard drive.  
+- Data persists even after VM stops or restarts.  
+
+---
+
+## 🔑 Key Features  
+- **Durable & Reliable** – Data is replicated across multiple locations within a zone.  
+- **Scalable** – Resize disks without downtime.  
+- **Types of Persistent Disks**:  
+  - Standard PD (HDD) – cost-effective, good for sequential access.  
+  - SSD PD – high performance, low latency.  
+  - Extreme PD – very high IOPS, for specialized workloads.  
+- **Regional PD** – Replicated across two zones in the same region for high availability.  
+
+---
+
+## ⚙️ Use Cases  
+- Running databases (needs reliable block storage).  
+- Applications requiring **consistent & fast I/O performance**.  
+- Backup & restore operations.  
+
+---
+
+## 🔄 Snapshots & Backups  
+- Persistent Disks support **snapshots** for backups.  
+- Snapshots are **incremental** – only changes are saved, reducing cost.  
+- Snapshots can be used to create **new disks** quickly.  
+
+---
+
+## 🔐 Security  
+- All Persistent Disks are **encrypted by default**.  
+- Users can also provide their own **encryption keys (CMEK)**.  
+
+---
+
+## 📝 Summary  
+- Persistent Disk = **Google Cloud’s block storage service**.  
+- Flexible, durable, and scalable storage for VM instances.  
+- Supports backups, snapshots, and encryption for data safety.  
+
+**Screenshots are available in screenshots folder section**
