@@ -1,0 +1,60 @@
+# Lab Work - Google Cloud Storage ☁️
+
+This lab demonstrates how to **create a bucket, upload objects, set permissions, and test features** of Google Cloud Storage (GCS).
+
+---
+
+## 1. Create a Bucket 🪣
+- Go to **Google Cloud Console → Navigation Menu → Storage → Buckets**  
+- Click **Create Bucket**  
+- Enter a **unique bucket name** (e.g., `my-gcp-lab-bucket`) 🌍  
+- Choose **Location type**:
+  - Region / Dual-region / Multi-region 📍  
+- Select **Storage Class** (Standard, Nearline, Coldline, Archive) 🏷️  
+- Set **Access Control** → Uniform bucket-level access recommended 🔐  
+- Click **Create** 
+
+---
+
+## 2. Upload an Object 📄
+- Open the created bucket → Click **Upload Files**  
+- Select a test file (e.g., `hello.txt`)  
+- Click **Upload**  
+- Verify the object is listed in the bucket ✅  
+
+---
+
+## 3. Set Permissions 🔑
+- Go to the bucket → **Permissions tab**  
+- Add a new principal (example: `allUsers`)  
+- Assign a role → `Storage Object Viewer` 👥  
+- Save changes  
+
+---
+
+## 4. Access Object via Public URL 🌐
+- Go to **Object details** → Copy the **Public URL**  
+- Paste it in the browser → Verify file access  
+
+---
+
+## 5. Enable Versioning 🔄
+- In the bucket → **Lifecycle and Versioning**  
+- Enable **Object Versioning**  
+- Re-upload the same file with changes → A new version will be created  
+- Check version history  
+
+---
+
+## 6. Lifecycle Management ⏳
+- Go to **Lifecycle rules** in the bucket  
+- Add a rule:
+  - Example: Move objects to **Coldline storage after 30 days**  
+- Save rule  
+
+---
+
+**Screenshots are available in screenshots folder section**📸
+
+
+
