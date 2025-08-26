@@ -1,0 +1,49 @@
+## 📒 Lecture-11 (GCP Networking | VPC)
+
+# 🌐 What is a VPC?
+
+- VPC (Virtual Private Cloud) → Private, isolated virtual network inside Google Cloud.
+
+- Provides networking, IP allocation, routing, firewall rules, and connectivity.
+
+- Every project has a default VPC (but in production, custom VPCs are preferred).
+
+## 🛠️ VPC Modes
+
+# 1. Auto Mode
+
+- Subnets are automatically created in each region.
+
+- Predefined IP ranges.
+
+- Easier for beginners, but less control.
+
+# 2. Custom Mode
+
+- No automatic subnets.
+
+- You manually define subnets, IP ranges, firewall rules.
+
+- Preferred for production as it gives fine-grained control.
+
+## 📍 Key Components of VPC
+
+- Subnets → Logical subdivisions of IP ranges (regional, not global).
+
+- Firewall Rules → Control traffic in & out of VPC.
+
+- Routes → Define traffic flow between subnets or to the internet.
+
+- Peering → Connect VPCs privately across projects/orgs.
+
+- Shared VPC → Multiple projects share the same VPC network.
+
+## 🔑 Important Points
+
+- VPC is global but subnets are regional.
+
+- IP ranges: private (RFC1918) or custom.
+
+- Default VPC comes with auto subnets + default firewall rules.
+
+- For production: always create a Custom VPC for better security & management. 
