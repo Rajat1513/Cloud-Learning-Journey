@@ -1,0 +1,34 @@
+# 📒 Notes – VPC Peering & Shared VPC (Video 12)
+
+## 🌐 VPC Peering
+- VPC Peering allows **private communication** between two VPC networks.
+- Both VPCs can be in the **same project** or **different projects**.
+- Benefits:
+  - Low-latency, high-bandwidth private communication 🚀
+  - No need for external IPs or VPN
+- Limitations:
+  - Transitive peering is not supported ❌  
+    (VPC-A peered with VPC-B, and VPC-B with VPC-C → A cannot talk to C)
+  - Duplicate IP ranges are not allowed.
+
+---
+
+## 🏢 Shared VPC
+- Shared VPC lets you **connect resources from multiple projects** to a **common VPC network**.
+- One project acts as the **Host Project**:
+  - Defines and owns the network.
+- Other projects act as **Service Projects**:
+  - Their resources (VMs, etc.) use the host project's VPC.
+- Advantages:
+  - Centralized control 🔑 over networking, security, and routing.
+  - Separation of duties → Network admins manage the host project, developers work in service projects.
+
+---
+
+## 📝 Key Differences
+| Feature            | VPC Peering 🌐 | Shared VPC 🏢 |
+|--------------------|----------------|---------------|
+| Scope              | Between 2 VPCs | Multiple projects sharing one VPC |
+| IP Overlap         | Not allowed    | Allowed (within host project) |
+| Control            | Each project controls own VPC | Centralized network admin control |
+| Use Case           | Communication between isolated networks | Large orgs with multiple projects needing a shared network |
