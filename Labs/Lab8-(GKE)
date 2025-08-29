@@ -1,0 +1,87 @@
+# 🧪 Lab – Google Kubernetes Engine (GKE)
+
+## 🔹 Objective
+Learn how to create and manage a **Google Kubernetes Engine cluster**, deploy an application, and expose it using a service.
+
+---
+
+## 🔹 Steps
+
+### 1. Create a GKE Cluster
+- Navigate to **Google Cloud Console** → **Kubernetes Engine** → **Clusters**.
+- Click **Create Cluster**.
+- Choose either:
+  - **Standard Mode** (you manage nodes)  
+  - **Autopilot Mode** (Google manages infra completely)
+- Configure:
+  - Name  
+  - Region/Zone  
+  - Node Pool (machine type, size)
+- Click **Create**.
+
+---
+
+### 2. Connect to the Cluster
+- Open **Cloud Shell** or your local terminal (with gcloud SDK).
+- Authenticate and configure kubectl:
+  ```bash
+  gcloud container clusters get-credentials <CLUSTER_NAME> --zone <ZONE> --project <PROJECT_ID>
+
+# 3. Deploy an Application
+
+- Create a deployment (example: nginx):
+
+( kubectl create deployment nginx --image=nginx )
+
+
+- Check deployment:
+
+( kubectl get deployments
+kubectl get pods )
+
+# 4. Expose the Application
+
+- Expose deployment using a service:
+
+(kubectl expose deployment nginx --type=LoadBalancer --port=80)
+
+
+- Verify:
+
+(kubectl get services)
+
+# 5. Scale the Deployment
+
+- Scale pods:
+
+ ( kubectl scale deployment nginx --replicas=3 )
+
+
+- Verify scaling:
+
+ (kubectl get pods)
+
+# 6. Delete Resources (Cleanup)
+
+- Delete service:
+
+( kubectl delete service nginx )
+
+- Delete deployment:
+
+( kubectl delete deployment nginx )
+
+
+**(Optional) Delete cluster from Console.**
+
+## ✅ Lab Summary
+
+- Created and connected to a GKE cluster.
+
+- Deployed a sample nginx app.
+
+- Exposed it using a LoadBalancer service.
+
+- Scaled pods and then cleaned up resources.
+
+

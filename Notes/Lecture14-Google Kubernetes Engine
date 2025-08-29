@@ -1,0 +1,62 @@
+# Lecture14 – Google Kubernetes Engine (GKE)
+
+## 🔹 Introduction to Kubernetes
+- Kubernetes (K8s) is an **open-source container orchestration platform**.
+- Helps manage containerized applications at scale:
+  - Deployment  
+  - Scaling  
+  - Networking  
+  - Load balancing  
+
+---
+
+## 🔹 Google Kubernetes Engine (GKE)
+- **Fully managed Kubernetes service** by Google Cloud.
+- Automates:
+  - Cluster management  
+  - Node provisioning  
+  - Scaling  
+  - Upgrades and repairs  
+
+---
+
+## 🔹 Key GKE Components
+1. **Cluster**
+   - A cluster is a group of nodes (VMs) managed by Kubernetes.
+   - Contains **control plane** + **worker nodes**.
+
+2. **Node**
+   - Virtual Machine instance that runs containerized apps.
+   - Includes **Kubelet** (agent) + Docker/container runtime.
+
+3. **Pod**
+   - Smallest deployable unit in Kubernetes.
+   - Can have **one or more containers**.
+
+4. **Deployment**
+   - Defines how pods should run (replicas, version, rollout).
+
+5. **Service**
+   - Provides networking and load balancing.
+   - Types:
+     - **ClusterIP** – internal only  
+     - **NodePort** – exposed via node’s IP  
+     - **LoadBalancer** – creates external LB  
+
+---
+
+## 🔹 Advantages of GKE
+- Managed control plane (Google handles upgrades, scaling, patches).  
+- Integrated monitoring and logging.  
+- High availability across zones.  
+- Autopilot mode (Google manages infra completely).  
+- Easy integration with CI/CD.  
+
+---
+
+## 🔹 Common Use Cases
+- Running **microservices architectures**.  
+- Hosting **scalable web apps**.  
+- Machine learning workloads.  
+- Batch/cron job processing.  
+- Hybrid cloud with Anthos.  
