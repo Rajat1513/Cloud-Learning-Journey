@@ -1,0 +1,79 @@
+# 📘 Lecture13 – Google App Engine (Video 13)
+
+## 🌍 What is Google App Engine?
+- Google App Engine (GAE) is a **Platform as a Service (PaaS)** offering in GCP.  
+- It allows developers to **build, deploy, and scale applications** without managing infrastructure.  
+- Focus is on **code**, while Google handles servers, scaling, load balancing, and monitoring.  
+
+---
+
+## 🛠️ Key Features
+- **Serverless platform** → no need to manage VMs or OS.  
+- **Automatic scaling** based on incoming traffic.  
+- **Multiple runtimes supported** → Java, Python, Node.js, PHP, Go, Ruby, .NET, etc.  
+- **Built-in security** (Google-managed firewalls, IAM, SSL).  
+- **Versioning** → deploy multiple versions and easily rollback.  
+- **Traffic splitting** between app versions for testing.  
+- **Integration with other GCP services** like Firestore, Cloud SQL, Cloud Storage, Pub/Sub.  
+
+---
+
+## 🏗️ Components of App Engine
+1. **Application** – Top-level container for all services.  
+2. **Services** – Logical components of the app (e.g., frontend, backend).  
+3. **Versions** – Each deployment creates a new version of a service.  
+4. **Instances** – Compute resources running each version (auto-scaled).  
+
+---
+
+## ⚡ Scaling Types
+- **Automatic Scaling** – Based on request load.  
+- **Basic Scaling** – Starts instances on demand and stops when idle.  
+- **Manual Scaling** – Fixed number of instances.  
+
+---
+
+## 📂 app.yaml File
+Configuration file required for each service.  
+Defines runtime, instance class, scaling type, environment variables, etc.  
+
+**Example:**
+```yaml
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+🚀 Deployment
+
+- Deploy using Cloud Shell / gcloud CLI:
+
+( gcloud app deploy )
+
+
+- After deployment → App is available on a public URL like:
+
+
+🔑 Benefits of App Engine
+
+- No infra management → just focus on coding.
+
+- Auto-scaling saves cost during low traffic.
+
+- Supports CI/CD pipelines for automated deployments.
+
+- Secure and highly available (Google manages redundancy).
+
+- Easy rollback with versioning.
+
+⚠️ Limitations
+
+- Limited flexibility compared to Compute Engine / Kubernetes.
+
+- Vendor lock-in (tightly bound with Google infra).
+
+- Not suitable for apps needing custom OS/kernel level control.
+
+✅ Summary
+
+** Google App Engine is ideal for developers who want to deploy apps quickly with minimal ops overhead.
+It’s great for startups, prototypes, and scalable web apps. **
+

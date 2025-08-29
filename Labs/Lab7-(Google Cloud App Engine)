@@ -1,0 +1,94 @@
+# 🧪 Lab Work – Google App Engine (Video 13)
+
+## 🎯 Objective
+Deploy a sample web application on **Google App Engine (GAE)** and understand scaling, versioning, and deployment.
+
+---
+
+## 📌 Steps
+
+### 1️⃣ Enable App Engine
+1. Go to **GCP Console → App Engine → Dashboard**.  
+2. Click **Create Application**.  
+3. Select your **Region** (⚠️ permanent – cannot be changed later).  
+
+
+---
+
+### 2️⃣ Prepare Your Application
+1. Use **Cloud Shell** or your local system.  
+
+2. Create a project folder, e.g.:  
+   ```bash
+   mkdir my-app && cd my-app
+
+3. Create main.py file with sample Flask app:
+ from flask import Flask
+ app = Flask(__name__)
+
+ @app.route('/')
+ def hello():
+    return "Hello from Google App Engine!
+
+4. Create requirements.txt:
+  flask
+  gunicorn
+
+
+5. Create app.yaml
+ runtime: python39
+ entrypoint: gunicorn -b :$PORT main:app
+
+ 3️⃣ Deploy the Application
+
+- Run in Cloud Shell:
+
+gcloud app deploy
+
+
+=- Confirm deployment.
+
+- It will take a few minutes.
+
+
+4️⃣ Access the Application
+
+- Once deployed, GCP will provide a public URL:
+
+- Open it in the browser.
+
+- You should see: “Hello from Google App Engine!”
+
+
+5️⃣ Test Versioning
+
+1. Modify main.py → Change text to:
+
+ return "Hello again! - Version 2"
+
+
+2. Redeploy:
+
+gcloud app deploy
+
+
+3. Check App Engine → Versions in GCP Console.
+
+6️⃣ Traffic Splitting (Optional)
+
+- Go to App Engine → Versions.
+
+- Split traffic between Version 1 and Version 2.
+
+- Useful for A/B testing.
+
+✅ Lab Summary
+
+- Created and deployed a Flask app on App Engine.
+
+- Learned about app.yaml configuration.
+
+- Verified deployment URL.
+
+- Explored versioning and traffic splitting.
+
