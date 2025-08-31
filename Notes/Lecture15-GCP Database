@@ -1,0 +1,59 @@
+# Lecture 15: Choose the Right Database on Google Cloud  
+
+## 🔑 Key Takeaways
+- Google Cloud provides multiple **database services**, each designed for specific workloads.  
+- Choosing the right database depends on **data type, consistency, scalability, and query needs**.  
+
+---
+
+## 🗂️ Database Options in GCP  
+
+### 1. Cloud SQL  
+- Fully managed **relational database service**.  
+- Supports **MySQL, PostgreSQL, SQL Server**.  
+- Best for **traditional applications** requiring strong consistency and relational schema.  
+
+### 2. Firestore (NoSQL Document DB)  
+- **Document-oriented**, horizontally scalable database.  
+- Real-time sync support.  
+- Ideal for **web, mobile apps, chat apps**.  
+
+### 3. Cloud Spanner  
+- **Globally distributed, strongly consistent relational DB**.  
+- Combines **SQL queries with horizontal scalability**.  
+- Best for **mission-critical, global-scale apps**.  
+
+### 4. Bigtable  
+- **Wide-column, NoSQL database**.  
+- Extremely low latency & massive scalability.  
+- Use cases: **IoT, time-series, analytics, recommendation systems**.  
+
+### 5. BigQuery  
+- Serverless, highly scalable **data warehouse**.  
+- Best for **analytical queries** on large datasets (not OLTP).  
+
+---
+
+## ⚖️ Decision Criteria  
+
+- **Relational vs. Non-relational**  
+  - Relational → Cloud SQL, Cloud Spanner  
+  - Non-relational → Firestore, Bigtable  
+
+- **Scale**  
+  - Small/medium → Cloud SQL, Firestore  
+  - Global/enterprise → Spanner, Bigtable  
+
+- **Workload Type**  
+  - **Transactional** → Cloud SQL, Spanner  
+  - **Analytical** → BigQuery  
+  - **Real-time sync** → Firestore  
+
+---
+
+## 📝 Summary  
+- Always start by identifying the **type of data and workload**.  
+- **Transactional + Relational** → Cloud SQL or Spanner  
+- **Flexible, unstructured, or real-time** → Firestore  
+- **Large-scale analytics** → BigQuery  
+- **High throughput + time-series** → Bigtable  
