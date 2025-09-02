@@ -1,0 +1,53 @@
+# Lecture 16  – GCP BigQuery 
+
+##  What is BigQuery?
+- **BigQuery** is Google Cloud’s fully managed, serverless **data warehouse**.
+- Designed for running fast, SQL-like analytical queries on large datasets (petabyte scale) without managing infrastructure.
+
+---
+
+##  Key Features
+- **Serverless Architecture** – No need for cluster management, auto-scaling built in.
+- **Standard SQL Support** – Use SQL queries to analyze structured data efficiently.
+- **Massively Parallel Processing (MPP)** – Executes queries across thousands of nodes for speed.
+- **Flexible Storage Options** – Separates storage and compute; allows cost optimization.
+- **Built-in BI Engine** – Enables fast dashboards and visualizations.
+- **Machine Learning Integration** – Use **BigQuery ML** to train and evaluate ML models directly within BigQuery.
+- **Data Export & Integration** – Export data easily to Google Cloud Storage or integrate with tools like Dataflow, Data Studio, Sheets.
+
+---
+
+##  Storage Models in BigQuery
+- **Native Storage** – Default managed, columnar storage optimized for analytics.
+- **External Tables** – Query data stored externally (e.g., in GCS or Cloud Storage) without importing.
+
+---
+
+##  Common Use Cases
+- Analyzing **large datasets** (logs, IoT data, marketing data).
+- Running **ad-hoc queries** for analytics.
+- **Real-time dashboarding** and BI use cases.
+- Training and evaluating **ML models** using SQL queries (BigQuery ML).
+- Data democratization and **cross-team analytics**.
+
+---
+
+##  Advantages
+- Eliminates complexity of infrastructure management.
+- High performance with MPP architecture.
+- Scales automatically based on query volume.
+- Enables powerful analytics and ML workflows within a unified platform.
+
+---
+
+##  Limitations
+- **Cost** can escalate with frequent or complex queries; use cost control features and query optimization.
+- Not ideal for **transactional** (OLTP) workloads.
+- Query performance depends heavily on **data design, partitioning, and clustering.**
+
+---
+
+##  Summary
+BigQuery is a powerful, scalable, and cost-effective solution for big data analytics.  
+Whether you're performing ad-hoc queries, building dashboards, or running in-database ML models, BigQuery simplifies and accelerates your data workflows.
+
