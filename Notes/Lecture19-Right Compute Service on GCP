@@ -1,0 +1,59 @@
+# Lecture19 : Choosing the Right Compute Service on GCP. 
+
+##  Overview
+This video guides you through choosing the most suitable compute solution in GCP by examining workload requirements, operational control, and abstraction level.
+
+---
+
+##  Compute Options on GCP
+
+### 1. Compute Engine (IaaS)
+- Provides **virtual machines (VMs)** with full control over OS, networking, and compute resources.
+- Best for scenarios needing **custom kernels, specific hardware configurations, or OS-level control**.
+- Pros: Flexibility, power, VM-level customization.
+- Considerations: Requires management of infra, scaling, and patching.
+
+### 2. Google Kubernetes Engine (GKE)
+- Managed service running **Kubernetes clusters** on GCP infrastructure.
+- Ideal for **containerized microservices**, CI/CD, and hybrid cloud deployments.
+- Pros: Autoscaling, container orchestration, advanced workloads.
+- Considerations: Requires containerization and Kubernetes knowledge.
+
+### 3. App Engine (PaaS)
+- Fully managed **platform** for deploying web apps without managing servers.
+- Best for CRUD-heavy, stateless apps where development speed matters.
+- Pros: Full serverless experience, fast development.
+- Considerations: Limited customization, environment constraints.
+
+### 4. Cloud Run
+- Serverless platform for running **stateless containers** on demand.
+- Suitable for event-driven or containerized workloads needing minimal management.
+- Pros: Flexibility of containers with serverless scaling.
+- Considerations: Best for lightweight workloads; not for stateful services.
+
+### 5. Cloud Functions
+- Event-driven, **function-as-a-service (FaaS)** offering.
+- Great for short-lived, trigger-based tasks like ETL or messaging workflows.
+- Pros: No server management, scalable by events.
+- Considerations: Stateless and limited to short executions.
+
+---
+
+##  Decision Factors
+
+| Factor               | Key Considerations                                           |
+|----------------------|--------------------------------------------------------------|
+| **Control vs. Abstraction** | More control (Compute Engine) ↔ less overhead (App Engine) |
+| **Workload Type**         | Containers (GKE/Cloud Run), triggers (Cloud Functions)     |
+| **Scalability Needs**     | Serverless options scale automatically; managed clusters scale with demand |
+| **Operational Overhead**  | IaaS requires infrastructure management; PaaS/FaaS reduces devOps burden |
+| **Use Case Examples**     | Legacy apps → GCE; microservices → GKE; quick APIs → Cloud Run; event tasks → Functions |
+
+---
+
+##  Summary
+- Map your **workload requirements** to available GCP compute services.
+- High control → **Compute Engine**  
+- Container orchestration → **GKE**  
+- Fast deployment, serverless → **App Engine**, **Cloud Run**, or **Cloud Functions**
+- Choosing the right compute service ensures optimized performance, cost, and developer efficiency.

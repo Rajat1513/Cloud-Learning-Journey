@@ -1,0 +1,40 @@
+# Lecture18 – GCP Cloud Logging and Monitoring. 
+
+##  What Is Covered
+This video provides an in-depth explanation of **Cloud Logging** and **Cloud Monitoring** features within the Google Cloud Operations Suite.
+
+---
+
+##  Cloud Logging
+- A centralized logging service for storing, querying, and analyzing log data from applications and infrastructure.
+- Features include log ingestion, log-based metrics, and integration with Alerting policies.
+- Enables filtering logs by severity, time, resources, or labels.
+
+---
+
+##  Cloud Monitoring
+- Designed to collect, visualize, and set alerts on system and application metrics.
+- Key capabilities:
+  - **Dashboards** to monitor performance, uptime, latency, and more.
+  - **Uptime checks** to ensure services are reachable.
+  - **Alerting policies** that send notifications based on thresholds or anomalies.
+
+---
+
+##  Features & Interaction
+- Seamless integration: Logging feeds metrics used in monitoring.
+- Logs-based metrics and monitoring create powerful observability workflows.
+- Works with other services like Error Reporting, Trace, Debugger, and more for full-stack visibility.
+
+---
+
+##  Benefits of Logging & Monitoring
+- **Operational Visibility**: Quickly identify and investigate issues.
+- **Proactive Alerts**: Get notified about incidents before users are impacted.
+- **Performance Insights**: Visualize system behavior over time.
+- **Compliance and Auditing**: Full log history for auditing and debugging.
+
+---
+
+##  Summary
+Cloud Logging and Monitoring are foundational tools in GCP's Operations Suite—key for maintaining reliable, observable, and secure cloud infrastructure.
